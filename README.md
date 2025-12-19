@@ -128,13 +128,13 @@ project/
 ## Contoh Tampilan Aplikasi
 
 **1. Home Page**
-![Mockup Home](https://via.placeholder.com/600x300?text=Home+Page+Mockup)
+![Mockup Home] (file:///D:/piku/WhatsApp%20Image%202025-12-19%20at%2023.23.54i.jpeg)
 
 **2. Form Input Data Karyawan**
-![Mockup Form](https://via.placeholder.com/600x300?text=Form+Input+Data+Karyawan)
+![Mockup Form](file:///C:/Users/pican/OneDrive/Pictures/Screenshots/Screenshot%202025-12-19%20232659.png)
 
 **3. Tabel Perbandingan Kinerja**
-![Mockup Table](https://via.placeholder.com/600x300?text=Tabel+Perbandingan+Kinerja)
+![Mockup Table](file:///D:/piku/WhatsApp%20Image%202025-12-19%20at%2023.23.54.jpeg)
 
 ---
 
