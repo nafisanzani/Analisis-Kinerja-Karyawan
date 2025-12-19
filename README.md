@@ -1,7 +1,3 @@
-# Analisis-Kinerja-Karyawan
-Perfect! Aku akan buatkan versi **README profesional lengkap dengan diagram alur aplikasi dan diagram class OOP** supaya terlihat seperti dokumentasi portofolio GitHub yang lengkap. Aku sertakan juga **flowchart proses kinerja karyawan** dan **struktur class**.
-
----
 
 # Aplikasi Analisis Kinerja Karyawan Berbasis Web
 
