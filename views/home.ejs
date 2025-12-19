@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Analisis Kinerja Karyawan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    .container {
+      width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header-text {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #f73f9e;
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-text">
+    <h2 style="margin-bottom: 20px;">Analisis Kinerja Karyawan</h2>
+    <p style="margin: 2px 0;">Nafisa Anzani Putri Thahir</p>
+    <p style="margin: 2px 0;">2510312027 (A)</p>
+    <br>
+    <p style="margin: 2px 0;"><strong>Program Studi Teknik Industri</strong></p>
+    <p style="margin: 2px 0;"><strong>UPN Veteran Jakarta</strong></p>
+    <p style="margin: 2px 0;"><strong>2025</strong></p>
+  </div>
+
+  <hr>
+
+  <form action="/analisis" method="POST">
+    <input type="text" name="nama" placeholder="Nama Karyawan" required>
+
+    <select name="departemen" required>
+      <option value="">-- Pilih Departemen --</option>
+      <option value="HRD">HRD</option>
+      <option value="Produksi">Produksi</option>
+      <option value="Keuangan">Keuangan</option>
+    </select>
+
+    <input type="number" name="produktif" placeholder="Nilai Produktivitas" required>
+    <input type="number" name="hadir" placeholder="Nilai Kehadiran" required>
+    <input type="number" name="disiplin" placeholder="Nilai Disiplin" required>
+
+    <button type="submit">Hitung Kinerja</button>
+  </form>
+
+  <% if (locals.data) { %>
+    <hr>
+    <h3>Hasil Analisis Terakhir</h3>
+    <p><strong>Nama:</strong> <%= data.nama %></p>
+    <p><strong>Departemen:</strong> <%= data.departemen %></p>
+    <p><strong>Rata-rata:</strong> <%= data.rata %></p>
+    <p><strong>Status:</strong> <%= data.status %></p>
+  <% } %>
+
+  <% if (locals.employees && employees.length > 0) { %>
+    <hr>
+    <h3>📋 Tabel Perbandingan Kinerja Karyawan</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Departemen</th>
+          <th>Produktif</th>
+          <th>Kehadiran</th>
+          <th>Disiplin</th>
+          <th>Rata-rata</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% employees.forEach((e, i) => { %>
+          <tr>
+            <td><%= i + 1 %></td>
+            <td><%= e.nama %></td>
+            <td><%= e.departemen %></td>
+            <td><%= e.produktif %></td>
+            <td><%= e.hadir %></td>
+            <td><%= e.disiplin %></td>
+            <td><%= e.rata %></td>
+            <td><%= e.status %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+
+</div>
+
+</body>
+</html>

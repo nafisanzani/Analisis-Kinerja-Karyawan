@@ -1,0 +1,23 @@
+<%- include("layout") %>
+
+<h2>Form Penilaian Karyawan</h2>
+
+<form action="/submit" method="POST">
+  <input type="text" name="name" placeholder="Nama Karyawan" required><br><br>
+
+  <input type="number" name="discipline" placeholder="Disiplin (0-100)" required><br><br>
+
+  <input type="number" name="productivity" placeholder="Produktivitas (0-100)" required><br><br>
+
+  <input type="number" name="attendance" placeholder="Kehadiran (0-100)" required><br><br>
+
+  <select name="departmentId">
+    <% departments.forEach(d => { %>
+      <option value="<%= d.id %>"><%= d.name %></option>
+    <% }) %>
+  </select><br><br>
+
+  <button type="submit">Hitung</button>
+</form>
+
+<%- include("footer") %>
