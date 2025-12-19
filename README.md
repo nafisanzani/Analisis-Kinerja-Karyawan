@@ -128,7 +128,7 @@ project/
 ## Contoh Tampilan Aplikasi
 
 **1. Home Page**
-![Mockup Home] (file:///D:/piku/WhatsApp%20Image%202025-12-19%20at%2023.23.54i.jpeg)
+![Mockup Home](file:///D:/piku/WhatsApp%20Image%202025-12-19%20at%2023.23.54i.jpeg)
 
 **2. Form Input Data Karyawan**
 ![Mockup Form](file:///C:/Users/pican/OneDrive/Pictures/Screenshots/Screenshot%202025-12-19%20232659.png)
